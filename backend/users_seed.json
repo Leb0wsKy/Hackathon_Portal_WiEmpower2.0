@@ -1,0 +1,5 @@
+[
+{ "username": "team_alpha", "password": "alpha123", "role": "hacker" },
+{ "username": "jury_user", "password": "jury123", "role": "jury" },
+{ "username": "team_beta", "password": "beta123", "role": "hacker" }
+]

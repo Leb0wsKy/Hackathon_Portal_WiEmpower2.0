@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": "oes8DxU3K51bQnundJ37e",
+      "username": "team_alpha",
+      "role": "hacker",
+      "hash": "$2a$10$BI1clo6RY6BUlfRT85TZteVFSiEvECi5.tcxKBKBYtt7pH6/Jogme"
+    },
+    {
+      "id": "UU260ogoUbYxSgfOybgoU",
+      "username": "jury_user",
+      "role": "jury",
+      "hash": "$2a$10$4UV/6KiIAzIHXftuzRoP9e7HI2GbZoNgMjEsp4PIiaEMpIalHAbpq"
+    },
+    {
+      "id": "-klD5QtSmNhLOZ0VHS3xO",
+      "username": "team_beta",
+      "role": "hacker",
+      "hash": "$2a$10$k2RUhy.akuujdzU3pcHii.5s8T1bARo1/7URhcCvEAo483ff1fxBy"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "c85Cj3zJTtwpWn-V88PkF",
+      "teamName": "team_beta",
+      "projectName": "Project test",
+      "description": "{\"presentation\":\"https://drive.google.com/file/d/16JDnlyWnjiVPEkdURkG2UjeeZ7tbwVat/view?usp=sharing\",\"github\":\"test\",\"other\":\"\"}",
+      "file": null,
+      "createdAt": "2025-10-27T20:40:36.620Z",
+      "authorId": "-klD5QtSmNhLOZ0VHS3xO"
+    },
+    {
+      "id": "zDNxTqfAD_jlqB8uEqnz9",
+      "teamName": "team_alpha",
+      "projectName": "test_alpha",
+      "description": "{\"presentation\":\"test\",\"github\":\"test\",\"other\":\"test\"}",
+      "file": null,
+      "createdAt": "2025-10-27T21:00:38.276Z",
+      "authorId": "oes8DxU3K51bQnundJ37e"
+    },
+    {
+      "id": "qAkXMA7HN_d7om7U3u21t",
+      "teamName": "team_alpha",
+      "projectName": "team alpha_second submission",
+      "description": "{\"presentation\":\"test2\",\"github\":\"test2\",\"other\":\"\"}",
+      "file": null,
+      "createdAt": "2025-10-27T21:01:00.083Z",
+      "authorId": "oes8DxU3K51bQnundJ37e"
+    },
+    {
+      "id": "uW-V4DKRB4xGuUtSPgPvQ",
+      "teamName": "team_alpha",
+      "projectName": "test3",
+      "description": "{\"presentation\":\"test3\",\"github\":\"test3\",\"other\":\"\"}",
+      "file": null,
+      "createdAt": "2025-10-27T21:01:15.386Z",
+      "authorId": "oes8DxU3K51bQnundJ37e"
+    }
+  ]
+}
