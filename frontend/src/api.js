@@ -1,4 +1,9 @@
-const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:4000';
+// Use env var REACT_APP_API_BASE when available (CRA). Otherwise construct the base
+// from the page hostname so the frontend will call the backend on the same machine
+// IP (e.g. http://192.168.1.10:4000) which makes the app usable across the LAN.
+// NOTE: for dev you can set HOST=0.0.0.0 (or create a .env with HOST=0.0.0.0)
+// and set REACT_APP_API_BASE to your machine IP before starting the dev server.
+const API_BASE = process.env.REACT_APP_API_BASE || `http://${window.location.hostname}:4000`;
 
 
 export async function login(username, password){

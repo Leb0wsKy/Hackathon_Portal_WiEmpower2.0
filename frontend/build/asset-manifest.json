@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1535c2a0.css",
+    "main.js": "/static/js/main.b68fed13.js",
+    "static/media/TunisiaSection.png": "/static/media/TunisiaSection.bb3fa2a0ad2ea6732a70.png",
+    "static/media/bg.jpg": "/static/media/bg.b49596d4568984dbcfb2.jpg",
+    "static/media/femme.png": "/static/media/femme.35eead071603676d3222.png",
+    "static/media/supcom.png": "/static/media/supcom.69eebb62d8e8adeccfcc.png",
+    "static/media/logo_wie.png": "/static/media/logo_wie.16a1ddaf2614bc89889e.png",
+    "static/media/logo_ieee_supcom.png": "/static/media/logo_ieee_supcom.c22c9e052d48bf221bc7.png",
+    "static/media/logo_wiempower.png": "/static/media/logo_wiempower.e99afe2284d1795bafaa.png",
+    "static/media/1470.png": "/static/media/1470.f8c01fc9fcfb48ea71b2.png",
+    "index.html": "/index.html",
+    "main.1535c2a0.css.map": "/static/css/main.1535c2a0.css.map",
+    "main.b68fed13.js.map": "/static/js/main.b68fed13.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1535c2a0.css",
+    "static/js/main.b68fed13.js"
+  ]
+}
