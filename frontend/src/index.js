@@ -1,12 +1,12 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import App from './App';
 import './styles.css';
 
 
 createRoot(document.getElementById('root')).render(
-    <BrowserRouter basename="/Hackathon_Portal_WiEmpower2.0">
+    <HashRouter basename="/Hackathon_Portal_WiEmpower2.0">
         <App />
-    </BrowserRouter>
+    </HashRouter>
 );
