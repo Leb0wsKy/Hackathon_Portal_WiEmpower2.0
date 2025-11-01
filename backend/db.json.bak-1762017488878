@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "id": "SZxZxIJblpJS_qaZhS0m4",
+      "username": "team_alpha",
+      "role": "hacker",
+      "hash": "$2a$10$YCu8ZsHPvl2uetkGy7GHaekGyYdTw45opLISs4t/WSZIDzaATs8vu"
+    },
+    {
+      "id": "Cdd768FsrDuZGMHTNo4P_",
+      "username": "jury_user",
+      "role": "jury",
+      "hash": "$2a$10$WlQwpZrAgQ/Q6/IbxcoNquocUxtBMaeWzZBchQ5ehVDK8QJiLlC4y"
+    },
+    {
+      "id": "vrSKdAaJMFdJor7Q6Chr0",
+      "username": "team_beta",
+      "role": "hacker",
+      "hash": "$2a$10$cWQaMIEcH8Mu4AZJt47mquKiBxjGq3YLD.KUyUlZfCxHwTJXttaai"
+    },
+    {
+      "id": "ll5mIlwGv0zkztd3KgQQW",
+      "username": "rayen_taa_zby",
+      "role": "hacker",
+      "hash": "$2a$10$AMaK4mSF1ZhUDI/bkpeaLuVuQCVB0x1b1da10L9tGC8J0NfA52EaS"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "PB86eemHkSv6XSq1_PY00",
+      "teamName": "team_alpha",
+      "projectName": "Mohamed",
+      "description": "{\"presentation\":\"test\",\"github\":\"test\",\"other\":\"test\"}",
+      "file": null,
+      "createdAt": "2025-11-01T10:44:57.730Z",
+      "authorId": "SZxZxIJblpJS_qaZhS0m4"
+    },
+    {
+      "id": "NoCMLJALTEUV52lbNBqpU",
+      "teamName": "team_alpha",
+      "projectName": "Test_chater",
+      "description": "{\"presentation\":\"test\",\"github\":\"gsgkns\",\"other\":\"sgsdg\"}",
+      "file": null,
+      "createdAt": "2025-11-01T15:54:27.579Z",
+      "authorId": "SZxZxIJblpJS_qaZhS0m4"
+    },
+    {
+      "id": "K6runiCsztvqAwGyK9OUL",
+      "teamName": "team_alpha",
+      "projectName": "asba",
+      "description": "{\"presentation\":\"https://www.github.com/asba\",\"github\":\"https://www.github.com/asba\",\"envVars\":\"API_KEY=sklAsba\",\"other\":\"\"}",
+      "file": null,
+      "createdAt": "2025-11-01T16:26:58.680Z",
+      "authorId": "SZxZxIJblpJS_qaZhS0m4"
+    }
+  ]
+}

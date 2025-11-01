@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { fetchSubmissions } from '../api';
+import { fetchSubmissions, API_BASE } from '../api';
 import juryImg from '../Assets/14700.png';
 
-export default function Jury(){
+export default function Jury() {
 	const [subs, setSubs] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [err, setErr] = useState(null);
@@ -13,71 +13,71 @@ export default function Jury(){
 	const [reseedErr, setReseedErr] = useState(null);
 	const [reseedSuccess, setReseedSuccess] = useState(null);
 
-	useEffect(()=>{
-		async function load(){
+	useEffect(() => {
+		async function load() {
 			setLoading(true);
 			setErr(null);
-			try{
+			try {
 				const res = await fetchSubmissions();
 				if (Array.isArray(res)) setSubs(res);
 				else if (res && res.submissions) setSubs(res.submissions);
 				else setErr('Unexpected response');
-			}catch(e){ setErr('Failed to fetch submissions'); }
-			finally{ setLoading(false); }
+			} catch (e) { setErr('Failed to fetch submissions'); }
+			finally { setLoading(false); }
 		}
 		load();
 	}, []);
 
-	function toggleEnv(id){
-		setExpandedEnv(prev => ({...prev, [id]: !prev[id]}));
+	function toggleEnv(id) {
+		setExpandedEnv(prev => ({ ...prev, [id]: !prev[id] }));
 	}
 
-	async function handleReseed(){
+	async function handleReseed() {
 		setReseedErr(null);
 		setReseedSuccess(null);
 
 		// Validate JSON
 		let parsedJson;
-		try{
+		try {
 			parsedJson = JSON.parse(reseedJson);
-		}catch(e){
+		} catch (e) {
 			setReseedErr('Invalid JSON format: ' + e.message);
 			return;
 		}
 
 		// Validate structure
-		if (!Array.isArray(parsedJson)){
+		if (!Array.isArray(parsedJson)) {
 			setReseedErr('JSON must be an array of users');
 			return;
 		}
 
 		// Validate each user
-		for (let i = 0; i < parsedJson.length; i++){
+		for (let i = 0; i < parsedJson.length; i++) {
 			const u = parsedJson[i];
-			if (!u.username || !u.password){
+			if (!u.username || !u.password) {
 				setReseedErr(`User ${i}: Missing "username" or "password" field`);
 				return;
 			}
 		}
 
-		// Check if jury user exists with password jury123
-		const hasJuryUser = parsedJson.some(u => u.username === 'jury_user' && u.password === 'jury123');
-		if (!hasJuryUser){
-			setReseedErr('⚠️ Warning: No user "jury_user" with password "jury123" found. This user is recommended for jury access.');
+		// Check if jury user exists
+		const hasJuryUser = parsedJson.some(u => u.username === 'jury_user');
+		if (!hasJuryUser) {
+			setReseedErr('⚠️ Warning: No user "jury_user" found. This user is recommended for jury access.');
 			return;
 		}
 
 		// Send reseed request
 		setReseedLoading(true);
-		try{
+		try {
 			const token = localStorage.getItem('token');
-			if (!token){
+			if (!token) {
 				setReseedErr('Not authenticated. Please login first.');
 				setReseedLoading(false);
 				return;
 			}
 
-			const response = await fetch('/api/admin/reseed', {
+			const response = await fetch(`${API_BASE}/api/admin/reseed`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ export default function Jury(){
 
 			const data = await response.json();
 
-			if (!response.ok){
+			if (!response.ok) {
 				setReseedErr('Error: ' + (data.error || 'Failed to reseed'));
 				setReseedLoading(false);
 				return;
@@ -97,35 +97,35 @@ export default function Jury(){
 			setReseedSuccess(`✅ Database reseeded successfully with ${data.usersCount} users`);
 			setReseedJson('');
 			setShowReseedDialog(false);
-			
+
 			// Reload submissions
 			setTimeout(() => {
 				window.location.reload();
 			}, 1500);
-		}catch(e){
+		} catch (e) {
 			setReseedErr('Network error: ' + e.message);
-		}finally{
+		} finally {
 			setReseedLoading(false);
 		}
 	}
 
-	function openReseedDialog(){
+	function openReseedDialog() {
 		setShowReseedDialog(true);
 		setReseedJson('');
 		setReseedErr(null);
 		setReseedSuccess(null);
 	}
 
-	function closeReseedDialog(){
+	function closeReseedDialog() {
 		setShowReseedDialog(false);
 		setReseedJson('');
 		setReseedErr(null);
 		setReseedSuccess(null);
 	}
 
-	function renderDesc(d, submissionId){
+	function renderDesc(d, submissionId) {
 		if (!d) return null;
-		try{
+		try {
 			const obj = JSON.parse(d);
 			return (
 				<div style={linksContainerStyle}>
@@ -148,7 +148,7 @@ export default function Jury(){
 					{obj.envVars && (
 						<div style={linkItemStyle}>
 							<span style={linkLabelStyle}>🔐 Environment Variables:</span>
-							<button 
+							<button
 								onClick={() => toggleEnv(submissionId)}
 								style={toggleButtonStyle}
 							>
@@ -169,8 +169,8 @@ export default function Jury(){
 					)}
 				</div>
 			);
-		}catch(e){
-			return <div style={{color:'#ad1457'}}>{d}</div>;
+		} catch (e) {
+			return <div style={{ color: '#ad1457' }}>{d}</div>;
 		}
 	}
 
@@ -314,7 +314,7 @@ export default function Jury(){
 		borderRadius: '10px'
 	};
 
-	const  listStyle = {
+	const listStyle = {
 		display: 'flex',
 		flexDirection: 'row',
 		flexWrap: 'wrap',
@@ -447,12 +447,12 @@ export default function Jury(){
 	return (
 		<div style={cardStyle}>
 			<h2 style={headerStyle}>
-				<img src={juryImg} alt="Jury" style={{height:36,verticalAlign:'middle'}} />
+				<img src={juryImg} alt="Jury" style={{ height: 36, verticalAlign: 'middle' }} />
 				Jury Dashboard
 			</h2>
 			<p style={descStyle}>All team submissions are listed below for evaluation.</p>
-			
-			<button 
+
+			<button
 				onClick={openReseedDialog}
 				style={reseedButtonStyle}
 				onMouseEnter={e => e.target.style.transform = 'translateY(-2px)'}
@@ -467,8 +467,8 @@ export default function Jury(){
 
 			<div style={listStyle}>
 				{subs.map(s => (
-					<div 
-						key={s.id} 
+					<div
+						key={s.id}
 						style={submissionStyle}
 						onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
 						onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
@@ -482,7 +482,7 @@ export default function Jury(){
 						</div>
 						{renderDesc(s.description, s.id)}
 						{s.file && (
-							<div style={{...linkItemStyle, marginTop: '12px'}}>
+							<div style={{ ...linkItemStyle, marginTop: '12px' }}>
 								<span style={linkLabelStyle}>📁 Attached File:</span>
 								<a href={s.file} target="_blank" rel="noreferrer" style={linkStyle}>
 									{s.file}
@@ -500,8 +500,8 @@ export default function Jury(){
 						<p style={dialogDescStyle}>
 							Paste a JSON array of users to reseed the database. Each user must have "username", "password", and optionally "role" fields.
 						</p>
-						<p style={{...dialogDescStyle, color: '#5e35b1', fontWeight: '600'}}>
-							⚠️ Important: Include a user with username "jury_user" and password "jury123"
+						<p style={{ ...dialogDescStyle, color: '#5e35b1', fontWeight: '600' }}>
+							⚠️ Important: Include a user with username "jury_user"
 						</p>
 
 						{reseedErr && <div style={dialogErrorStyle}>{reseedErr}</div>}
@@ -511,8 +511,8 @@ export default function Jury(){
 							value={reseedJson}
 							onChange={e => setReseedJson(e.target.value)}
 							placeholder={JSON.stringify([
-								{ "username": "jury_user", "password": "jury123", "role": "jury" },
-								{ "username": "hacker1", "password": "pass123", "role": "hacker" }
+								{ "username": "jury_user", "password": "xxxxxxx", "role": "jury" },
+								{ "username": "hacker1", "password": "xxxxxx", "role": "hacker" }
 							], null, 2)}
 							style={textareaStyle}
 							disabled={reseedLoading}

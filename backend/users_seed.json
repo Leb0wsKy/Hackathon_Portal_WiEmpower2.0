@@ -1,6 +1,127 @@
 [
-{ "username": "team_alpha", "password": "alpha123", "role": "hacker" },
-{ "username": "jury_user", "password": "jury123", "role": "jury" },
-{ "username": "team_beta", "password": "beta123", "role": "hacker" },
-{ "username": "rayen_taa_zby", "password": "rayen123", "role": "hacker" }
+  {
+    "username": "Binary Brains 2.0",
+    "password": "QmluYXJ5IEJyYWlucyAyLjA=",
+    "role": "hacker"
+  },
+  {
+    "username": "OnePi3ce",
+    "password": "T25lUGkzY2U=",
+    "role": "hacker"
+  },
+  {
+    "username": "Chaba5ba5",
+    "password": "Q2hhYmE1YmE1",
+    "role": "hacker"
+  },
+  {
+    "username": "MLOU5_IA",
+    "password": "TUxPVTVfSUE=",
+    "role": "hacker"
+  },
+  {
+    "username": "Sa79",
+    "password": "U2E3OQ==",
+    "role": "hacker"
+  },
+  {
+    "username": "5aliha_ala_allah",
+    "password": "NWFsaWhhX2FsYV9hbGxhaA==",
+    "role": "hacker"
+  },
+  {
+    "username": "1ntrud3rs",
+    "password": "MW50cnVkM3Jz",
+    "role": "hacker"
+  },
+  {
+    "username": "JBCAF",
+    "password": "SkJDQUY=",
+    "role": "hacker"
+  },
+  {
+    "username": "Stack overqueens",
+    "password": "U3RhY2sgb3ZlcnF1ZWVucw==",
+    "role": "hacker"
+  },
+  {
+    "username": "Er7i",
+    "password": "RXI3aQ==",
+    "role": "hacker"
+  },
+  {
+    "username": "WIOOOUUU",
+    "password": "V0lPT09VVVU=",
+    "role": "hacker"
+  },
+  {
+    "username": "PI22A",
+    "password": "UEkyMkE=",
+    "role": "hacker"
+  },
+  {
+    "username": "BoysTeam",
+    "password": "Qm95c1RlYW0=",
+    "role": "hacker"
+  },
+  {
+    "username": "Masterpiece",
+    "password": "TWFzdGVycGllY2U=",
+    "role": "hacker"
+  },
+  {
+    "username": "FaraTech",
+    "password": "RmFyYVRlY2g=",
+    "role": "hacker"
+  },
+  {
+    "username": "Akatsuki",
+    "password": "QWthdHN1a2k=",
+    "role": "hacker"
+  },
+  {
+    "username": "Junior'at",
+    "password": "SnVuaW9yJ2F0",
+    "role": "hacker"
+  },
+  {
+    "username": "wie'nners",
+    "password": "d2llJ25uZXJz",
+    "role": "hacker"
+  },
+  {
+    "username": "Ta7team",
+    "password": "VGE3dGVhbQ==",
+    "role": "hacker"
+  },
+  {
+    "username": "Eee",
+    "password": "RWVl",
+    "role": "hacker"
+  },
+  {
+    "username": "jury_Baha",
+    "password": "anVyeV9CYWhh",
+    "role": "jury"
+  },
+  {
+    "username": "jury_Arbi",
+    "password": "anVyeV9BcmJp",
+    "role": "jury"
+  },
+  {
+    "username": "jury_Iheb",
+    "password": "anVyeV9JaGVi",
+    "role": "jury"
+  },
+  {
+    "username": "jury_user",
+    "password": "jury123",
+    "role": "jury"
+  },
+  {
+    "username": "soula",
+    "password": "soula1234",
+    "role": "jury"
+  }
 ]

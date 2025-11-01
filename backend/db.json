@@ -1,57 +1,155 @@
 {
   "users": [
     {
-      "id": "SZxZxIJblpJS_qaZhS0m4",
-      "username": "team_alpha",
+      "id": "V2oC6iOBK-RqX3yrxB-As",
+      "username": "Binary Brains 2.0",
       "role": "hacker",
-      "hash": "$2a$10$YCu8ZsHPvl2uetkGy7GHaekGyYdTw45opLISs4t/WSZIDzaATs8vu"
+      "hash": "$2a$10$0XbANbnXwBw2PCwDJ0jxwulNz2d2CZgzJNMqeOKhtyiYVDEW76OnK"
     },
     {
-      "id": "Cdd768FsrDuZGMHTNo4P_",
+      "id": "wi6Bz22Kzh-o35RQqFXGB",
+      "username": "OnePi3ce",
+      "role": "hacker",
+      "hash": "$2a$10$9NQXc/5qaGM7o6ZMhg/P/ezJq6c0mdsaTCPFqK8xpNjzfdirDb9wq"
+    },
+    {
+      "id": "Khl6fOXmC8CYamNY5T00s",
+      "username": "Chaba5ba5",
+      "role": "hacker",
+      "hash": "$2a$10$M057qgJ.a.BSQnz.bcTAQuxNpxLZhwFjYKMtf7lwmFJh.GdtsnRSy"
+    },
+    {
+      "id": "gEab0vNnYGkaCFtzkNOFh",
+      "username": "MLOU5_IA",
+      "role": "hacker",
+      "hash": "$2a$10$ZaAR3usfyKh6Yx/irIqYQOmSQlON9acMLGqqumYw5mrDHRN02kVqS"
+    },
+    {
+      "id": "h6SVDkydmKaGveQe7DIci",
+      "username": "Sa79",
+      "role": "hacker",
+      "hash": "$2a$10$OAIUObQLUz2uuxixdr4NCedLF3icbkjdfs1.ce1KTxltEcoCyhh06"
+    },
+    {
+      "id": "egday5TyKSkt5kAW_s6IJ",
+      "username": "5aliha_ala_allah",
+      "role": "hacker",
+      "hash": "$2a$10$ywTIACPvmjb5U0IdXxbbf.XnlFTlOtgZJmQTFtKW7CABVO.WqVsIC"
+    },
+    {
+      "id": "P7pXPBaycAgQTlpgtSMLs",
+      "username": "1ntrud3rs",
+      "role": "hacker",
+      "hash": "$2a$10$.xlW2EmBOkNTvqVVTB78nON/repI/8vHzz2YMk7vPAMjNATvDJSr2"
+    },
+    {
+      "id": "hpV4BVQ3YqVJFcDBpl0RQ",
+      "username": "JBCAF",
+      "role": "hacker",
+      "hash": "$2a$10$iGnXtoIzRYdZiIbyeeTjCOgvE7upsvfoqUvVTld/m8AHOzyeK4.Z."
+    },
+    {
+      "id": "XJsf3i7wBKGfL4oldcpai",
+      "username": "Stack overqueens",
+      "role": "hacker",
+      "hash": "$2a$10$0gCNH0SWvx66ubYzTyGpuOtdIPDq5k/cVSf.LRV/wf4IbnjS4dBZG"
+    },
+    {
+      "id": "1_qz2h9l_7DPglv6e9MzT",
+      "username": "Er7i",
+      "role": "hacker",
+      "hash": "$2a$10$7X7GDfdAH9mgdR1BRWTQC.PSmSbcrQc1MgFtyagr1ecO5.bVTsrf."
+    },
+    {
+      "id": "mI9vE_aUve-6bWwZJNjZ9",
+      "username": "WIOOOUUU",
+      "role": "hacker",
+      "hash": "$2a$10$6v1gX2h1nbTWd9IhGGOl0eEMbAeVVymXGUomlXUJjdpW8ND9MUSOO"
+    },
+    {
+      "id": "zYQTrVpZ_SKoajPh1I6_U",
+      "username": "PI22A",
+      "role": "hacker",
+      "hash": "$2a$10$y2ZIdObQrnMSdz5Hf/aWHexEBh8xU2PFyl59r1AVkJpDn/bj7uCHu"
+    },
+    {
+      "id": "Lge1zFhqbRGov0iYLsn1f",
+      "username": "BoysTeam",
+      "role": "hacker",
+      "hash": "$2a$10$DakXVn93OR8JXHg.gi6gT.7do.C0FpAP/rwMncdxdyvK5cf7MfUdi"
+    },
+    {
+      "id": "zTkUp0A_kC2udL0j1mCs5",
+      "username": "Masterpiece",
+      "role": "hacker",
+      "hash": "$2a$10$C3cBUXsYtgB6I2KPzskU0uxQYzu2WCwW/MCWhdAZ3sss8zb15icEu"
+    },
+    {
+      "id": "M7fd_qJcF_g5-5Di8bm18",
+      "username": "FaraTech",
+      "role": "hacker",
+      "hash": "$2a$10$0F8yZXKULV6bYTK9/911COTi950CWjbt2b2kY8g5o2Oj6hiVh9C92"
+    },
+    {
+      "id": "HKKJOMZra2hEaTKB5nu-q",
+      "username": "Akatsuki",
+      "role": "hacker",
+      "hash": "$2a$10$XPfBWZMNGkYkhxYxwUiihu6XmrpvAtkgXxKPPYK/3w.43/8jQjq6G"
+    },
+    {
+      "id": "CNOw2-MceA1XI7YpqUmlI",
+      "username": "Junior'at",
+      "role": "hacker",
+      "hash": "$2a$10$Nu9UzbEAR.dEwbuKGGNNKePTEp/RpCn1mohs08a8gGC1NCIMjk0nq"
+    },
+    {
+      "id": "XrkzLOosu4dFKWmnW_6jv",
+      "username": "wie'nners",
+      "role": "hacker",
+      "hash": "$2a$10$s7eTEiwBbiBJmz.XvBk.6eNoHS83K35tTiieF61OVAifcZOiclJwm"
+    },
+    {
+      "id": "A0NvY2Kja1b0TvrvIQclz",
+      "username": "Ta7team",
+      "role": "hacker",
+      "hash": "$2a$10$fJ4/DiRzLa5GLbYtHCOamee/MiyRUVnOmp.b7jfzAUomcI6.7dqFC"
+    },
+    {
+      "id": "Hwh1n8CbJzElPA-maWF_f",
+      "username": "Eee",
+      "role": "hacker",
+      "hash": "$2a$10$gf5rTG8BC89nFpb0QGH1tuNPSxNncfyhonYf40ocqxXJ2YxjThHoq"
+    },
+    {
+      "id": "7vZ6wn3UDK6RDKyhJR8ax",
+      "username": "jury_Baha",
+      "role": "jury",
+      "hash": "$2a$10$.7AOuMQyo2DrOPWWMV9bD.oeDz0KldX4/BRO1gx1AUp9gCj0s6r2C"
+    },
+    {
+      "id": "QsD8ovMMY6ji1bORZCdLX",
+      "username": "jury_Arbi",
+      "role": "jury",
+      "hash": "$2a$10$VL8G0oSQmUnhX3zXXD/Nn.1UVpCUSxPW8LSi3tGY86ha6tbFNdURK"
+    },
+    {
+      "id": "SzuI-Y2HuVM-G0Zn5Bqwj",
+      "username": "jury_Iheb",
+      "role": "jury",
+      "hash": "$2a$10$QZEmrDaTdU/kXV1sIyWflu0kNAGXoF3.waH/wveTWU6A8xpXRIqbm"
+    },
+    {
+      "id": "iZRhT9Tmt5FwwXsjkDSjC",
       "username": "jury_user",
       "role": "jury",
-      "hash": "$2a$10$WlQwpZrAgQ/Q6/IbxcoNquocUxtBMaeWzZBchQ5ehVDK8QJiLlC4y"
+      "hash": "$2a$10$cHnlE8A05.r10KdkVNVK/uxfSqKQb9l7BbsxD7YVDzks1.t.vIEMi"
     },
     {
-      "id": "vrSKdAaJMFdJor7Q6Chr0",
-      "username": "team_beta",
-      "role": "hacker",
-      "hash": "$2a$10$cWQaMIEcH8Mu4AZJt47mquKiBxjGq3YLD.KUyUlZfCxHwTJXttaai"
-    },
-    {
-      "id": "ll5mIlwGv0zkztd3KgQQW",
-      "username": "rayen_taa_zby",
-      "role": "hacker",
-      "hash": "$2a$10$AMaK4mSF1ZhUDI/bkpeaLuVuQCVB0x1b1da10L9tGC8J0NfA52EaS"
+      "id": "LxqFOosYI6xsgS4_75gfI",
+      "username": "soula",
+      "role": "jury",
+      "hash": "$2a$10$/cJL6Jts6S5z5OZiKAUFKe4Bf.FskQ85uS7xxYLT7hZ8Lr2ES25uW"
     }
   ],
-  "submissions": [
-    {
-      "id": "PB86eemHkSv6XSq1_PY00",
-      "teamName": "team_alpha",
-      "projectName": "Mohamed",
-      "description": "{\"presentation\":\"test\",\"github\":\"test\",\"other\":\"test\"}",
-      "file": null,
-      "createdAt": "2025-11-01T10:44:57.730Z",
-      "authorId": "SZxZxIJblpJS_qaZhS0m4"
-    },
-    {
-      "id": "NoCMLJALTEUV52lbNBqpU",
-      "teamName": "team_alpha",
-      "projectName": "Test_chater",
-      "description": "{\"presentation\":\"test\",\"github\":\"gsgkns\",\"other\":\"sgsdg\"}",
-      "file": null,
-      "createdAt": "2025-11-01T15:54:27.579Z",
-      "authorId": "SZxZxIJblpJS_qaZhS0m4"
-    },
-    {
-      "id": "K6runiCsztvqAwGyK9OUL",
-      "teamName": "team_alpha",
-      "projectName": "asba",
-      "description": "{\"presentation\":\"https://www.github.com/asba\",\"github\":\"https://www.github.com/asba\",\"envVars\":\"API_KEY=sklAsba\",\"other\":\"\"}",
-      "file": null,
-      "createdAt": "2025-11-01T16:26:58.680Z",
-      "authorId": "SZxZxIJblpJS_qaZhS0m4"
-    }
-  ]
+  "submissions": []
 }
