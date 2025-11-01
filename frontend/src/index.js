@@ -14,7 +14,7 @@ console.log('Root element:', root);
 if (root) {
     createRoot(root).render(
         <ErrorBoundary>
-            <HashRouter basename="/Hackathon_Portal_WiEmpower2.0">
+            <HashRouter>
                 <App />
             </HashRouter>
         </ErrorBoundary>
