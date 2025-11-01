@@ -6,7 +6,7 @@ import './styles.css';
 
 
 createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
+    <BrowserRouter basename="/Hackathon_Portal_WiEmpower2.0">
         <App />
     </BrowserRouter>
 );
