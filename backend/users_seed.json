@@ -123,5 +123,10 @@
     "username": "soula",
     "password": "soula1234",
     "role": "jury"
+  },
+  {
+    "username": "hayder",
+    "password": "hayder1234",
+    "role": "hacker"
   }
 ]

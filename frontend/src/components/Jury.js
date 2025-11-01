@@ -123,6 +123,13 @@ export default function Jury() {
 		setReseedSuccess(null);
 	}
 
+	function normalizeUrl(url) {
+		if (!url) return '#';
+		url = url.trim();
+		if (url.startsWith('http://') || url.startsWith('https://')) return url;
+		return 'https://' + url;
+	}
+
 	function renderDesc(d, submissionId) {
 		if (!d) return null;
 		try {
@@ -132,7 +139,7 @@ export default function Jury() {
 					{obj.presentation && (
 						<div style={linkItemStyle}>
 							<span style={linkLabelStyle}>📊 Presentation:</span>
-							<a href={obj.presentation} target="_blank" rel="noreferrer" style={linkStyle}>
+							<a href={normalizeUrl(obj.presentation)} target="_blank" rel="noreferrer" style={linkStyle}>
 								{obj.presentation}
 							</a>
 						</div>
@@ -140,7 +147,7 @@ export default function Jury() {
 					{obj.github && (
 						<div style={linkItemStyle}>
 							<span style={linkLabelStyle}>💻 GitHub:</span>
-							<a href={obj.github} target="_blank" rel="noreferrer" style={linkStyle}>
+							<a href={normalizeUrl(obj.github)} target="_blank" rel="noreferrer" style={linkStyle}>
 								{obj.github}
 							</a>
 						</div>
@@ -162,7 +169,7 @@ export default function Jury() {
 					{obj.other && (
 						<div style={linkItemStyle}>
 							<span style={linkLabelStyle}>📎 Other:</span>
-							<a href={obj.other} target="_blank" rel="noreferrer" style={linkStyle}>
+							<a href={normalizeUrl(obj.other)} target="_blank" rel="noreferrer" style={linkStyle}>
 								{obj.other}
 							</a>
 						</div>
