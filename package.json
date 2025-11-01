@@ -1,0 +1,26 @@
+{
+  "name": "wiempower-hackathon-portal",
+  "version": "1.0.0",
+  "description": "WiEmpower Hackathon Portal - lightweight hackathon management system",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "npm run dev:backend & npm run dev:frontend",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:frontend",
+    "start:backend": "cd backend && npm start",
+    "start": "npm run start:backend",
+    "deploy:backend": "git push heroku main",
+    "seed:users": "cd backend && node scripts/seed_users.js"
+  },
+  "keywords": [
+    "hackathon",
+    "wiempower",
+    "submissions",
+    "jury"
+  ],
+  "author": "IEEE WiEmpower",
+  "license": "MIT"
+}
