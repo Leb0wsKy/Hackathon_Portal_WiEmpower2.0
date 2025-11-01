@@ -19,7 +19,7 @@ function App(){
 	return (
 		<div className="app" style={{
 			minHeight: '100vh',
-			minWidth: '100vw',
+			minWidth: '100%',
 			background: `linear-gradient(180deg, #fce4ec 0%, #f8bbd0 100%)`,
 			backgroundImage: `url(${bg})`,
 			backgroundSize: 'cover',
