@@ -2,8 +2,7 @@
 // 1) Use REACT_APP_API_BASE if set (build-time/env override)
 // 2) Otherwise, use the current page hostname so the frontend calls the backend
 //    on the same machine/IP across the LAN (http://<host>:4000)
-const host = typeof window !== 'undefined' ? window.location.hostname : 'localhost';
-export const API_BASE = process.env.REACT_APP_API_BASE || `http://${host}:4000`;
+export const API_BASE = process.env.REACT_APP_API_BASE || 'https://wiempower-94634ca51322.herokuapp.com';
 
 
 export async function login(username, password) {

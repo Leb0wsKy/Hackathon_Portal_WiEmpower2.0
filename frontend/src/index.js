@@ -13,13 +13,10 @@ console.log('Root element:', root);
 
 if (root) {
     createRoot(root).render(
-        <ErrorBoundary>
-            <HashRouter>
-                <App />
-            </HashRouter>
-        </ErrorBoundary>
+        <HashRouter>
+            <App />
+        </HashRouter>
     );
-    console.log('✅ App rendered successfully');
 } else {
     console.error('❌ Root element not found!');
 }
