@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "id": "d4UtE95hwIwXPLBwR-udM",
+      "username": "team_alpha",
+      "role": "hacker",
+      "hash": "$2a$10$PVbuWUNFE/XCXbKtHtx4Hezr58ckbB3H/J5MN.eV758FGf.HrChGe"
+    },
+    {
+      "id": "_5nop0PPYoRKQTFPkqjbO",
+      "username": "jury_user",
+      "role": "jury",
+      "hash": "$2a$10$xYFtKj0gBiHytNYvDkEj5OIllmcb/GT8m39KfbsdPEb86wS5R4P8e"
+    },
+    {
+      "id": "OwoxHkhTpiKY9ci94HGVZ",
+      "username": "team_beta",
+      "role": "hacker",
+      "hash": "$2a$10$ir7AxXlzBxistGSI02QewurpyFDGcMQ085Z2hDmnzN2BGXLYdVs1K"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "qzzI1lGVfjTbSZ3REjGd3",
+      "teamName": "team_alpha",
+      "projectName": "Project",
+      "description": "{\"presentation\":\"link1\",\"github\":\"link2\",\"other\":\"link3\"}",
+      "file": null,
+      "createdAt": "2025-10-27T21:20:16.184Z",
+      "authorId": "d4UtE95hwIwXPLBwR-udM"
+    },
+    {
+      "id": "yLKdoN34qdJHhuBRHX5qX",
+      "teamName": "team_alpha",
+      "projectName": "test",
+      "description": "{\"presentation\":\"test\",\"github\":\"test\",\"other\":\"test\"}",
+      "file": null,
+      "createdAt": "2025-10-28T00:44:34.385Z",
+      "authorId": "d4UtE95hwIwXPLBwR-udM"
+    },
+    {
+      "id": "FjyYVwL6dD0sAi1C2SMw9",
+      "teamName": "team_alpha",
+      "projectName": "ksontini",
+      "description": "{\"presentation\":\"link1\",\"github\":\"link2\",\"other\":\"link3\"}",
+      "file": null,
+      "createdAt": "2025-10-28T07:20:53.465Z",
+      "authorId": "d4UtE95hwIwXPLBwR-udM"
+    },
+    {
+      "id": "cMOFtFTC6d3ltYQQfaGgj",
+      "teamName": "team_alpha",
+      "projectName": "aloulou",
+      "description": "{\"presentation\":\"zedfqsf\",\"github\":\"zgsd\",\"other\":\"sgsd\"}",
+      "file": null,
+      "createdAt": "2025-10-28T07:38:44.915Z",
+      "authorId": "d4UtE95hwIwXPLBwR-udM"
+    },
+    {
+      "id": "mvUcoT9c0_TQFQ1AdVFNV",
+      "teamName": "team_beta",
+      "projectName": "weslati",
+      "description": "{\"presentation\":\"test\",\"github\":\"test\",\"other\":\"test\"}",
+      "file": null,
+      "createdAt": "2025-10-28T07:46:54.729Z",
+      "authorId": "OwoxHkhTpiKY9ci94HGVZ"
+    },
+    {
+      "id": "7HXlz5I_GbJbgad4ZmtQv",
+      "teamName": "team_beta",
+      "projectName": "Salma Moghta ",
+      "description": "{\"presentation\":\"https://www.facebook.com\",\"github\":\"\",\"other\":\"\"}",
+      "file": null,
+      "createdAt": "2025-10-28T12:27:41.779Z",
+      "authorId": "OwoxHkhTpiKY9ci94HGVZ"
+    },
+    {
+      "id": "kr-gKy8p0n416mc6qkCDp",
+      "teamName": "team_beta",
+      "projectName": "zapao",
+      "description": "{\"presentation\":\"http://qvqfsvskjvkjqndvlq\",\"github\":\"shqbvuqzbvsdkvqd\",\"other\":\"jsvhjdbsVbkv\"}",
+      "file": null,
+      "createdAt": "2025-10-28T13:42:55.681Z",
+      "authorId": "OwoxHkhTpiKY9ci94HGVZ"
+    },
+    {
+      "id": "xOXXPAzt9NVhVsNd4mQJH",
+      "teamName": "team_beta",
+      "projectName": "ahmed",
+      "description": "{\"presentation\":\"qkjsdhqsd\",\"github\":\"sqjxnjksqxn\",\"other\":\"sqjknsqjk\"}",
+      "file": null,
+      "createdAt": "2025-10-28T14:47:48.380Z",
+      "authorId": "OwoxHkhTpiKY9ci94HGVZ"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": "b--1SFv3U3EMt7w47Piku",
+      "username": "team_alpha",
+      "role": "hacker",
+      "hash": "$2a$10$wwIHttl7rTIEFO/Uavzie.OrhqmQfgbA54yDw0tmxfcUX1pO2/RQO"
+    },
+    {
+      "id": "3Hqk1TsDhcGqypflOUDuA",
+      "username": "jury_user",
+      "role": "jury",
+      "hash": "$2a$10$3yPX9BUTXtBQj6AM8WoULOThSxyddfvN1.F6gIKfXvvk7Cyw6N2ya"
+    },
+    {
+      "id": "IU0ZFihnz2qxWyZJ08Vfv",
+      "username": "team_beta",
+      "role": "hacker",
+      "hash": "$2a$10$.Hq/MkeeL04Sl6m.yDMIOe7ZiBrXZqb9du0mXl3.v6mQn/lXiGuYu"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "Bka4D4ZekG-MfKFlZuRgr",
+      "teamName": "team_alpha",
+      "projectName": "test",
+      "description": "{\"presentation\":\"test\",\"github\":\"test\",\"other\":\"test\"}",
+      "file": null,
+      "createdAt": "2025-10-30T19:12:11.409Z",
+      "authorId": "b--1SFv3U3EMt7w47Piku"
+    },
+    {
+      "id": "tmA_Vp2w7SSx5eJQlVO2F",
+      "teamName": "team_alpha",
+      "projectName": "aloulou",
+      "description": "{\"presentation\":\"test\",\"github\":\"test\",\"other\":\"test1\"}",
+      "file": null,
+      "createdAt": "2025-10-31T09:41:19.508Z",
+      "authorId": "b--1SFv3U3EMt7w47Piku"
+    }
+  ]
+}

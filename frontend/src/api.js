@@ -3,7 +3,7 @@
 // IP (e.g. http://192.168.1.10:4000) which makes the app usable across the LAN.
 // NOTE: for dev you can set HOST=0.0.0.0 (or create a .env with HOST=0.0.0.0)
 // and set REACT_APP_API_BASE to your machine IP before starting the dev server.
-const API_BASE = process.env.REACT_APP_API_BASE || `http://${window.location.hostname}:4000`;
+const API_BASE = process.env.REACT_APP_API_BASE || "http://172.20.10.3:4000";
 
 
 export async function login(username, password){

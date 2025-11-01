@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "sl_7_M3ip6e4C4q-PvsaQ",
+      "username": "team_alpha",
+      "role": "hacker",
+      "hash": "$2a$10$YwI6fQAZ1T08UJozk/Ldje/mRpyrkPi5Rt4itK4SHt2HeQaBpj21S"
+    },
+    {
+      "id": "06jh3CDmke9HdA3dVk9j7",
+      "username": "jury_user",
+      "role": "jury",
+      "hash": "$2a$10$/uhjLKrMLJKh1E7bGcMipe8w.vyJt98VvGtm4s5ik8I7KMR3JtHsK"
+    },
+    {
+      "id": "11SWPnqjxAM_hjyQxas4D",
+      "username": "team_beta",
+      "role": "hacker",
+      "hash": "$2a$10$0pMgOqMFPsJFYrAHOw6aG.t8bJ8YBQrIfUI1uZHKkltZbj76SNoTK"
+    },
+    {
+      "id": "Xn8OApBCLRjzgWkRFqdyO",
+      "username": "zawjti",
+      "role": "hacker",
+      "hash": "$2a$10$ZHRrXCkwXC9IDtJlhfbrUugYVMQydsZjszVghs9Jq7pezABmFmajG"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "UFIW34MseqQm43CNm74Cm",
+      "teamName": "zawjti",
+      "projectName": "Zawjti",
+      "description": "{\"presentation\":\"zawjti.com\",\"github\":\"zawjti.repo\",\"other\":\"zawjti.blablabla\"}",
+      "file": null,
+      "createdAt": "2025-10-29T17:18:59.192Z",
+      "authorId": "Xn8OApBCLRjzgWkRFqdyO"
+    },
+    {
+      "id": "fiia332F42DD7rbTh46Ub",
+      "teamName": "team_beta",
+      "projectName": "test",
+      "description": "{\"presentation\":\"test\",\"github\":\"test\",\"other\":\"\"}",
+      "file": null,
+      "createdAt": "2025-10-29T17:19:44.223Z",
+      "authorId": "11SWPnqjxAM_hjyQxas4D"
+    }
+  ]
+}

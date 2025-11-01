@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "F9lYKc8EJtqsM5eYedqpV",
+      "username": "team_alpha",
+      "role": "hacker",
+      "hash": "$2a$10$3PgAD1xxuLFwOk0fCDUxj.g44AwnJrmM.tF/GyhR24ykaKyql0h6G"
+    },
+    {
+      "id": "FxoQonOkaThxipuesucdd",
+      "username": "jury_user",
+      "role": "jury",
+      "hash": "$2a$10$q1sS8lenSsC4M0wMRPBZDeNa/5WRXP4BKp8SNmIon43AhsSKvnlrK"
+    },
+    {
+      "id": "QodE-Bh75W2fsTB0AjWbI",
+      "username": "team_beta",
+      "role": "hacker",
+      "hash": "$2a$10$bRKLhQEaK.7RcMPm.XisNemKqOihoHlDp3i4d8r7asKcbuIPwXyEK"
+    },
+    {
+      "id": "_y-lbsVWSIyGPjF7wdSRK",
+      "username": "rayen_taa_zby",
+      "role": "hacker",
+      "hash": "$2a$10$dd1bwlkp0nWuje3AcYqbJewUlXFp21rWQ9c031WGWf0Maptbl2P.O"
+    }
+  ],
+  "submissions": []
+}

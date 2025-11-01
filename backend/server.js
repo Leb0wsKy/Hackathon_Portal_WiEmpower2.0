@@ -112,4 +112,7 @@ app.get('/api/submissions', authenticateToken, async (req, res) => {
 
 
 // start server
-app.listen(PORT, "0.0.0.0", () => console.log(`Backend listening on http://localhost:${PORT}`));
+app.listen(PORT, "0.0.0.0", () => {
+	console.log(`Backend listening on http://0.0.0.0:${PORT}`);
+	console.log(`Access from network at http://172.20.10.3:${PORT}`);
+});
