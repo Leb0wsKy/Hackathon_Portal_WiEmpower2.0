@@ -155,6 +155,81 @@ app.get('/api/health', (req, res) => {
 	});
 });
 
+// POST /api/admin/reseed - Replace entire users_seed.json and reseed db.json
+// Requires authorization header with admin token
+app.post('/api/admin/reseed', authenticateToken, async (req, res) => {
+	// Only allow jury (can extend to true admin role if needed)
+	if (!req.user || req.user.role !== 'jury') {
+		return res.status(403).json({ error: 'Forbidden: Admin access required' });
+	}
+
+	const { users: newUsers } = req.body;
+	
+	if (!Array.isArray(newUsers)) {
+		return res.status(400).json({ error: 'Body must contain "users" array' });
+	}
+
+	// Validate seed data structure
+	if (!newUsers.every(u => u.username && u.password !== undefined)) {
+		return res.status(400).json({ 
+			error: 'Each user must have "username" and "password" fields' 
+		});
+	}
+
+	try {
+		const seedPath = path.join(__dirname, 'users_seed.json');
+		const dbPath = path.join(__dirname, 'db.json');
+		const backupPath = path.join(__dirname, `db.json.bak-${Date.now()}`);
+
+		// Backup existing db.json
+		if (fs.existsSync(dbPath)) {
+			fs.copyFileSync(dbPath, backupPath);
+		}
+
+		// Write new seed file
+		fs.writeFileSync(seedPath, JSON.stringify(newUsers, null, 2), 'utf8');
+
+		// Hash passwords and create users
+		const users = [];
+		for (const u of newUsers) {
+			const password = u.password || '';
+			const hash = await bcrypt.hash(password, 10);
+			users.push({
+				id: nanoid(),
+				username: u.username,
+				role: u.role || 'hacker',
+				hash
+			});
+		}
+
+		// Read existing submissions to preserve them
+		await db.read();
+		const existingSubmissions = db.data?.submissions || [];
+
+		// Write new db.json with new users but preserved submissions
+		const newDb = {
+			users,
+			submissions: existingSubmissions
+		};
+		fs.writeFileSync(dbPath, JSON.stringify(newDb, null, 2), 'utf8');
+
+		// Reload db in memory
+		await db.read();
+
+		console.log(`Database reseeded by ${req.user.username} with ${users.length} users`);
+
+		res.json({
+			status: 'reseeded',
+			usersCount: users.length,
+			backupPath: backupPath,
+			timestamp: new Date().toISOString()
+		});
+	} catch (err) {
+		console.error('Error reseeding database:', err);
+		res.status(500).json({ error: 'Failed to reseed database', details: err.message });
+	}
+});
+
 // start server
 initDb().then(() => {
 	app.listen(PORT, "0.0.0.0", () => {
