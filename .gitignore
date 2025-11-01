@@ -4,3 +4,4 @@ build/
 frontend/build/
 backend/uploads/
 *.log
+build
