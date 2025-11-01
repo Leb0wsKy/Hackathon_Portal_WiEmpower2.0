@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logoBlanc from '../Assets/logo_wiempower.png';
 import hackerImg from '../Assets/1470.png';
-import { submitDeliverable } from '../api';
+import { submitDeliverable, fetchMySubmission, updateDeliverable } from '../api';
 
 export default function Hacker(){
 	const stored = localStorage.getItem('user');
@@ -15,6 +15,35 @@ export default function Hacker(){
 	const [projectName, setProjectName] = useState('');
 	const [loading, setLoading] = useState(false);
 	const [msg, setMsg] = useState(null);
+	const [existingSubmissionId, setExistingSubmissionId] = useState(null);
+	const [isUpdating, setIsUpdating] = useState(false);
+
+	React.useEffect(() => {
+		async function loadExistingSubmission(){
+			try{
+				const result = await fetchMySubmission();
+				if (result.submission){
+					const s = result.submission;
+					setExistingSubmissionId(s.id);
+					setProjectName(s.projectName || '');
+					
+					// Parse description
+					try{
+						const desc = JSON.parse(s.description || '{}');
+						setPresentation(desc.presentation || '');
+						setGithub(desc.github || '');
+						setEnvVars(desc.envVars || '');
+						setOther(desc.other || '');
+					}catch(e){
+						console.error('Failed to parse description:', e);
+					}
+				}
+			}catch(err){
+				console.error('Failed to fetch existing submission:', err);
+			}
+		}
+		loadExistingSubmission();
+	}, []);
 
 	function deriveProjectNameFromGithub(url){
 		try{
@@ -49,16 +78,30 @@ export default function Hacker(){
 
 		try{
 			setLoading(true);
-			const res = await submitDeliverable(fd);
-			if (res && res.id){
-				setMsg('Submission successful!');
-				setPresentation(''); 
-				setGithub(''); 
-				setEnvVars('');
-				setOther(''); 
-				setProjectName('');
+			let res;
+			
+			if (existingSubmissionId){
+				// Update existing submission
+				res = await updateDeliverable(existingSubmissionId, fd);
+				if (res && res.id){
+					setMsg('✅ Submission updated successfully!');
+				}else{
+					setMsg(res.error || 'Update failed');
+				}
 			}else{
-				setMsg(res.error || 'Submission failed');
+				// Create new submission
+				res = await submitDeliverable(fd);
+				if (res && res.id){
+					setExistingSubmissionId(res.id);
+					setMsg('✅ Submission successful!');
+					setPresentation(''); 
+					setGithub(''); 
+					setEnvVars('');
+					setOther(''); 
+					setProjectName('');
+				}else{
+					setMsg(res.error || 'Submission failed');
+				}
 			}
 		}catch(err){
 			setMsg('Network or server error');
@@ -224,7 +267,7 @@ export default function Hacker(){
 					onMouseEnter={e => !loading && (e.target.style.transform = 'translateY(-2px)')}
 					onMouseLeave={e => e.target.style.transform = 'translateY(0)'}
 				>
-					{loading ? 'Submitting...' : 'Submit Deliverables'}
+					{loading ? 'Processing...' : existingSubmissionId ? 'Update Submission' : 'Submit Deliverables'}
 				</button>
 			</form>
 		</div>

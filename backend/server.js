@@ -131,6 +131,68 @@ app.post('/api/submissions', authenticateToken, upload.single('file'), async (re
 	res.json(submission);
 });
 
+// PUT /api/submissions/:id (hacker) - update own submission
+app.put('/api/submissions/:id', authenticateToken, upload.single('file'), async (req, res) => {
+	const { id } = req.params;
+	const { teamName, projectName, description } = req.body;
+	
+	if (!teamName || !projectName) {
+		return res.status(400).json({ error: 'Missing required fields: teamName, projectName' });
+	}
+
+	// Parse description to validate it contains required fields
+	let descObj;
+	try {
+		descObj = JSON.parse(description || '{}');
+	} catch (e) {
+		return res.status(400).json({ error: 'Invalid description format' });
+	}
+
+	// Validate that at least presentation or github is provided
+	if (!descObj.presentation && !descObj.github) {
+		return res.status(400).json({ 
+			error: 'At least one of presentation or github link is required' 
+		});
+	}
+
+	await db.read();
+	const submissionIndex = db.data.submissions.findIndex(s => s.id === id);
+	
+	if (submissionIndex === -1) {
+		return res.status(404).json({ error: 'Submission not found' });
+	}
+
+	const submission = db.data.submissions[submissionIndex];
+
+	// Verify ownership
+	if (submission.authorId !== req.user.id) {
+		return res.status(403).json({ error: 'Forbidden: Can only update your own submission' });
+	}
+
+	// Update submission
+	submission.teamName = teamName;
+	submission.projectName = projectName;
+	submission.description = description;
+	submission.updatedAt = new Date().toISOString();
+	
+	// Update file if provided
+	if (req.file) {
+		submission.file = '/uploads/' + req.file.filename;
+	}
+
+	db.data.submissions[submissionIndex] = submission;
+	await db.write();
+
+	console.log('Updated submission:', {
+		id,
+		teamName,
+		projectName,
+		hasEnvVars: !!descObj.envVars
+	});
+
+	res.json(submission);
+});
+
 // GET /api/submissions (jury) - returns all submissions
 app.get('/api/submissions', authenticateToken, async (req, res) => {
 	// only jury can fetch all submissions
@@ -144,6 +206,27 @@ app.get('/api/submissions', authenticateToken, async (req, res) => {
 	console.log(`Jury ${req.user.username} accessed ${submissions.length} submissions`);
 	
 	res.json(submissions);
+});
+
+// GET /api/my-submission (hacker) - returns hacker's own submission if exists
+app.get('/api/my-submission', authenticateToken, async (req, res) => {
+	if (!req.user) {
+		return res.status(401).json({ error: 'Not authenticated' });
+	}
+
+	await db.read();
+	const submissions = db.data.submissions || [];
+	
+	// Find submission by authorId (hacker's own submission)
+	const submission = submissions.find(s => s.authorId === req.user.id);
+	
+	if (!submission) {
+		return res.status(404).json({ submission: null });
+	}
+
+	console.log(`Hacker ${req.user.username} fetched their submission ${submission.id}`);
+	
+	res.json({ submission });
 });
 
 // Health check endpoint
